@@ -55,5 +55,9 @@ jobs:
           esac
           echo "Resolved ServiceNow instance: $INSTANCE"
           echo "SN_INSTANCE=$INSTANCE" >> "$GITHUB_ENV"
+              env:
+      nowUsername: ${{ secrets.SN_USERNAME }}
+      nowPassword: ${{ secrets.SN_PASSWORD }}
 
       # TODO: Add the pipeline credentials (job-level env block) and the apply changes step here
+
